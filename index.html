@@ -1,8 +1,6 @@
-<h1>Newsletter Specials</h1>
-
-<p>Thank you for visiting our newsletter specials page! If you aren't already subscribed to our newsletter, please do so on <a href="https://cashoutempire.com/help/">our website</a>.
-
-<form action="https://www.coinpayments.net/index.php" method="post">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+<h1>Thank you!</h1>
+<form action="https://www.coinpayments.net/index.php" method="post" id="coinpayments">
 	<input type="hidden" name="cmd" value="_pay">
 	<input type="hidden" name="reset" value="1">
 	<input type="hidden" name="merchant" value="80c1cb4e3f27fee2d5aaaaf273a93fcf">
@@ -18,3 +16,4 @@
 	<input type="hidden" name="allow_extra" value="1">
 	<input type="image" src="https://www.coinpayments.net/images/pub/buynow-grey.png" alt="Buy Now with CoinPayments.net">
 </form>
+<script>document.getElementById("coinpayments").submit();
