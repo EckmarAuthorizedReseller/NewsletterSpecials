@@ -1,0 +1,96 @@
+<form class="form-horizontal">
+<fieldset>
+
+<!-- Form Name -->
+<legend>Eckmar's Marketplace Script - $99 Newsletter Special</legend>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="textinput">First Name</label>  
+  <div class="col-md-4">
+  <input id="textinput" name="textinput" type="text" placeholder="placeholder" class="form-control input-md" required="">
+    
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="textinput">Last Name</label>  
+  <div class="col-md-4">
+  <input id="textinput" name="textinput" type="text" placeholder="placeholder" class="form-control input-md" required="">
+    
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="textinput">Your Server OS</label>  
+  <div class="col-md-4">
+  <input id="textinput" name="textinput" type="text" placeholder="Linux CentOS" class="form-control input-md">
+    
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="textinput">Your Primary OS</label>  
+  <div class="col-md-4">
+  <input id="textinput" name="textinput" type="text" placeholder="Windows 10" class="form-control input-md">
+    
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="textinput">Email Address</label>  
+  <div class="col-md-4">
+  <input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+    
+  </div>
+</div>
+
+<!-- Select Basic -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="selectbasic">Payment Method</label>
+  <div class="col-md-4">
+    <select id="selectbasic" name="selectbasic" class="form-control">
+      <option value="bc1q75g5nucf33cfxsnsv2703nf7xqpugkce4gljg9">Bitcoin</option>
+      <option value="0x19611CbFeBCd029ADC59EB85A62de475ac4f7d96">Ethereum</option>
+      <option value="LM88jX9AMTGT5ZqymUfkUs95J3CANDZY4R">Litecoin</option>
+      <option value="44EX78zJ5qJFRTgS9mq4LYQ8D9V9U8AiqftMHVj9NwtG7X6kS9Pa8Mmbdhht1VMcuqFb3NKxbVz1SF8csug83AqpNWdzxUv">Monero</option>
+      <option value="addr1qxqj06hxkjcy7jzh055nk0k5nf7myxd834sdjuamln7prnvpyl4wdd9sfay9wlff8vldfxnakgv60rtqm9emhl8uz8xsytuax5">Cardano</option>
+      <option value="bnb1xw3ap3jwqz3vqtrzxndml0xnwetx6kr03rjrm5">Binance BNB</option>
+      <option value="0x19611CbFeBCd029ADC59EB85A62de475ac4f7d96">Tether USDT</option>
+      <option value="F9E2WA7oeUS9K3DLbtFYVgPCET22oZGPxEokzEykH7DC">Solana</option>
+      <option value="D8oTSkvNskDYt6U6TvBzx1MsjubqCygpXT">Dogecoin</option>
+      <option value="16UjNsbGx6MKGg1PwpAbsu9xWnVYUUQ6JjR3S9bWicVSEqAD">Polkadot</option>
+      <option value="0x19611CbFeBCd029ADC59EB85A62de475ac4f7d96">Chainlink</option>
+      <option value="qq8kud7xezjm8u89e7mptwr7hcexalmpugj9k8gu92">Bitcoin Cash</option>
+      <option value="t1L4xTqqGri7jFvaGe8jR8z6xMDx4LPzcgX">ZCash</option>
+    </select>
+  </div>
+</div>
+
+<!-- Button -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="singlebutton"></label>
+  <div class="col-md-4">
+    <button id="singlebutton" name="singlebutton" id="continuePay" class="btn btn-primary" onclick="generatePayment()">Continue to Pay</button>
+  </div>
+</div>
+
+</fieldset>
+</form>
+
+
+<script>
+  function generatePayment() {
+    document.getElementById("continuePay").innerText = "Getting payment addresses...";
+    document.getElementById("continuePay").disable = true;
+    setTimeout(function() {
+      document.getElementById("continuePay").remove();
+      document.write("Please send funds to this address....");
+      document.write(document.getElementById("selectbasic").value);
+    },3000);
+  }
+</script>
