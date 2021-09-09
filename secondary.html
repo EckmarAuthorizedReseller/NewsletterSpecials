@@ -1,96 +1,113 @@
-<form class="form-horizontal">
-<fieldset>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous" />
+<style>
+	#continuePay {
+		margin-top: 10px;
+	}
+	#fundsArea {
+		margin-top: 10px;
+	}
+</style>
+<div class="container col-lg-12">
+	<form id="gogo" class="form-horizontal">
+		<fieldset>
+			<!-- Form Name -->
+			<legend>Eckmar's Marketplace Script - $99 Newsletter Special</legend>
 
-<!-- Form Name -->
-<legend>Eckmar's Marketplace Script - $99 Newsletter Special</legend>
+			<!-- Text input-->
+			<div class="form-group">
+				<label class="col-md-4 control-label" for="textinput">First Name</label>
+				<div class="col-md-4">
+					<input id="textinput1" name="textinput" type="text" placeholder="placeholder" class="form-control input-md" required="" />
+				</div>
+			</div>
 
-<!-- Text input-->
-<div class="form-group">
-  <label class="col-md-4 control-label" for="textinput">First Name</label>  
-  <div class="col-md-4">
-  <input id="textinput" name="textinput" type="text" placeholder="placeholder" class="form-control input-md" required="">
-    
-  </div>
+			<!-- Text input-->
+			<div class="form-group">
+				<label class="col-md-4 control-label" for="textinput">Last Name</label>
+				<div class="col-md-4">
+					<input id="textinput2" name="textinput" type="text" placeholder="placeholder" class="form-control input-md" required="" />
+				</div>
+			</div>
+
+			<!-- Text input-->
+			<div class="form-group">
+				<label class="col-md-4 control-label" for="textinput">Your Server OS</label>
+				<div class="col-md-4">
+					<input id="textinput3" name="textinput" type="text" placeholder="Linux CentOS" class="form-control input-md" />
+				</div>
+			</div>
+
+			<!-- Text input-->
+			<div class="form-group">
+				<label class="col-md-4 control-label" for="textinput">Your Primary OS</label>
+				<div class="col-md-4">
+					<input id="textinput4" name="textinput" type="text" placeholder="Windows 10" class="form-control input-md" />
+				</div>
+			</div>
+
+			<!-- Text input-->
+			<div class="form-group">
+				<label class="col-md-4 control-label" for="textinput">Email Address</label>
+				<div class="col-md-4">
+					<input id="textinput5" name="textinput" type="text" placeholder="" class="form-control input-md" />
+				</div>
+			</div>
+
+			<!-- Select Basic -->
+			<div class="form-group">
+				<label class="col-md-4 control-label" for="selectbasic">Payment Method</label>
+				<div class="col-md-4">
+					<select id="selectbasic" name="selectbasic" class="form-control">
+						<option value="bc1q75g5nucf33cfxsnsv2703nf7xqpugkce4gljg9">Bitcoin</option>
+						<option value="0x19611CbFeBCd029ADC59EB85A62de475ac4f7d96">Ethereum</option>
+						<option value="LM88jX9AMTGT5ZqymUfkUs95J3CANDZY4R">Litecoin</option>
+						<option value="44EX78zJ5qJFRTgS9mq4LYQ8D9V9U8AiqftMHVj9NwtG7X6kS9Pa8Mmbdhht1VMcuqFb3NKxbVz1SF8csug83AqpNWdzxUv">Monero</option>
+						<option value="addr1qxqj06hxkjcy7jzh055nk0k5nf7myxd834sdjuamln7prnvpyl4wdd9sfay9wlff8vldfxnakgv60rtqm9emhl8uz8xsytuax5">Cardano</option>
+						<option value="bnb1xw3ap3jwqz3vqtrzxndml0xnwetx6kr03rjrm5">Binance BNB</option>
+						<option value="0x19611CbFeBCd029ADC59EB85A62de475ac4f7d96">Tether USDT</option>
+						<option value="F9E2WA7oeUS9K3DLbtFYVgPCET22oZGPxEokzEykH7DC">Solana</option>
+						<option value="D8oTSkvNskDYt6U6TvBzx1MsjubqCygpXT">Dogecoin</option>
+						<option value="16UjNsbGx6MKGg1PwpAbsu9xWnVYUUQ6JjR3S9bWicVSEqAD">Polkadot</option>
+						<option value="0x19611CbFeBCd029ADC59EB85A62de475ac4f7d96">Chainlink</option>
+						<option value="qq8kud7xezjm8u89e7mptwr7hcexalmpugj9k8gu92">Bitcoin Cash</option>
+						<option value="t1L4xTqqGri7jFvaGe8jR8z6xMDx4LPzcgX">ZCash</option>
+					</select>
+				</div>
+			</div>
+
+			<!-- Button -->
+			<div class="form-group">
+				<label class="col-md-4 control-label" for="singlebutton"></label>
+				<div class="col-md-4">
+					<button name="singlebutton" id="continuePay" class="btn btn-primary">Continue to Pay</button>
+				</div>
+			</div>
+
+			<div id="fundsArea" style="display: none">
+				<strong>Please send funds to this address:</strong><br />
+				<span id="address"></span><br/>
+				Once funds are confirmed, you will be able to continue to the next step.
+			</div>
+		</fieldset>
+	</form>
 </div>
-
-<!-- Text input-->
-<div class="form-group">
-  <label class="col-md-4 control-label" for="textinput">Last Name</label>  
-  <div class="col-md-4">
-  <input id="textinput" name="textinput" type="text" placeholder="placeholder" class="form-control input-md" required="">
-    
-  </div>
-</div>
-
-<!-- Text input-->
-<div class="form-group">
-  <label class="col-md-4 control-label" for="textinput">Your Server OS</label>  
-  <div class="col-md-4">
-  <input id="textinput" name="textinput" type="text" placeholder="Linux CentOS" class="form-control input-md">
-    
-  </div>
-</div>
-
-<!-- Text input-->
-<div class="form-group">
-  <label class="col-md-4 control-label" for="textinput">Your Primary OS</label>  
-  <div class="col-md-4">
-  <input id="textinput" name="textinput" type="text" placeholder="Windows 10" class="form-control input-md">
-    
-  </div>
-</div>
-
-<!-- Text input-->
-<div class="form-group">
-  <label class="col-md-4 control-label" for="textinput">Email Address</label>  
-  <div class="col-md-4">
-  <input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
-    
-  </div>
-</div>
-
-<!-- Select Basic -->
-<div class="form-group">
-  <label class="col-md-4 control-label" for="selectbasic">Payment Method</label>
-  <div class="col-md-4">
-    <select id="selectbasic" name="selectbasic" class="form-control">
-      <option value="bc1q75g5nucf33cfxsnsv2703nf7xqpugkce4gljg9">Bitcoin</option>
-      <option value="0x19611CbFeBCd029ADC59EB85A62de475ac4f7d96">Ethereum</option>
-      <option value="LM88jX9AMTGT5ZqymUfkUs95J3CANDZY4R">Litecoin</option>
-      <option value="44EX78zJ5qJFRTgS9mq4LYQ8D9V9U8AiqftMHVj9NwtG7X6kS9Pa8Mmbdhht1VMcuqFb3NKxbVz1SF8csug83AqpNWdzxUv">Monero</option>
-      <option value="addr1qxqj06hxkjcy7jzh055nk0k5nf7myxd834sdjuamln7prnvpyl4wdd9sfay9wlff8vldfxnakgv60rtqm9emhl8uz8xsytuax5">Cardano</option>
-      <option value="bnb1xw3ap3jwqz3vqtrzxndml0xnwetx6kr03rjrm5">Binance BNB</option>
-      <option value="0x19611CbFeBCd029ADC59EB85A62de475ac4f7d96">Tether USDT</option>
-      <option value="F9E2WA7oeUS9K3DLbtFYVgPCET22oZGPxEokzEykH7DC">Solana</option>
-      <option value="D8oTSkvNskDYt6U6TvBzx1MsjubqCygpXT">Dogecoin</option>
-      <option value="16UjNsbGx6MKGg1PwpAbsu9xWnVYUUQ6JjR3S9bWicVSEqAD">Polkadot</option>
-      <option value="0x19611CbFeBCd029ADC59EB85A62de475ac4f7d96">Chainlink</option>
-      <option value="qq8kud7xezjm8u89e7mptwr7hcexalmpugj9k8gu92">Bitcoin Cash</option>
-      <option value="t1L4xTqqGri7jFvaGe8jR8z6xMDx4LPzcgX">ZCash</option>
-    </select>
-  </div>
-</div>
-
-<!-- Button -->
-<div class="form-group">
-  <label class="col-md-4 control-label" for="singlebutton"></label>
-  <div class="col-md-4">
-    <button id="singlebutton" name="singlebutton" id="continuePay" class="btn btn-primary" onclick="generatePayment()">Continue to Pay</button>
-  </div>
-</div>
-
-</fieldset>
-</form>
-
-
 <script>
-  function generatePayment() {
-    document.getElementById("continuePay").innerText = "Getting payment addresses...";
-    document.getElementById("continuePay").disable = true;
-    setTimeout(function() {
-      document.getElementById("continuePay").remove();
-      document.write("Please send funds to this address....");
-      document.write(document.getElementById("selectbasic").value);
-    },3000);
-  }
+	document.getElementById("gogo").onsubmit = function () {
+		return false;
+	};
+
+	document.getElementById("continuePay").onclick = function () {
+		generatePayment();
+	};
+
+	function generatePayment() {
+		if (document.getElementById("textinput1").value != "" && document.getElementById("textinput2").value != "" && document.getElementById("textinput3").value != "" && document.getElementById("textinput4").value != "" && document.getElementById("textinput5").value != "" && document.getElementById("selectbasic").value != "") {
+			document.getElementById("continuePay").innerText = "Getting payment addresses...";
+			document.getElementById("continuePay").disabled = true;
+			setTimeout(function () {
+				document.getElementById("address").innerText = document.getElementById("selectbasic").value;
+				document.getElementById("fundsArea").style.display = "block";
+			}, 2000);
+		}
+	}
 </script>
